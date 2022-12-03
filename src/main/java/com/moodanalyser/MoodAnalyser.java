@@ -4,26 +4,18 @@ import java.util.Scanner;
 
 public class MoodAnalyser {
     
-    // CONSTRUCTOR WITHOUT PARAMETER
-    public MoodAnalyser() {
-        checkmood("i am in sad mood");
-    }
-
-    // CONSTRUCTOR WITH PARAMETER
-    public static String checkmood(String mood) {
-		if (mood.toLowerCase().contains("happy")) {
-            System.out.println("HAPPY MOOD");
-            return "SAD";
-        } else {
-            System.out.println("SAD MOOD");
-        }
-        return "SAD";
-    }
 
     public static void main(String[] args) {
         System.out.println("Mood Analyser");
-        System.out.println("EXCEPTION HANDLING");
-		// CALLING CONSTRUCTOR WITHOUT PARAMETER
-		MoodAnalyser checkMood = new MoodAnalyser();
+        String myMood = null;
+		try {
+			if (myMood.toLowerCase().contains("happy"))
+				System.out.println("HAPPY MOOD");
+			else
+				System.out.println("SAD MOOD");
+		} catch (NullPointerException e) {
+			System.out.println("YOU HAVE NOT ENTERED THE DATA! ENTER THE VALID DATA");
+		}
+    
     }
 }
