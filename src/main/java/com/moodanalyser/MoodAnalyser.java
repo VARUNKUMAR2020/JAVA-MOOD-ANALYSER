@@ -13,7 +13,7 @@ public class MoodAnalyser {
     public static String checkmood(String mood) {
 		if (mood.toLowerCase().contains("happy")) {
             System.out.println("HAPPY MOOD");
-            return "HAPPY";
+            return "SAD";
         } else {
             System.out.println("SAD MOOD");
         }
