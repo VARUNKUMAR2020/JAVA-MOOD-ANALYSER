@@ -10,7 +10,7 @@ public class MoodAnalyser
             } else {
                 System.out.println("SAD MOOD");
             }
-            return checkmood;
+            return "HAPPY";
         }
     
     public static void main( String[] args )
